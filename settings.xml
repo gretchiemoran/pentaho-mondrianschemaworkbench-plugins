@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+	<pluginGroups>
+		<pluginGroup>org.jenkins-ci.tools</pluginGroup>
+	</pluginGroups>
+
+	<profiles>
+		<profile>
+			<id>default</id>
+			
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			
+			<repositories>
+
+				<repository>
+					<id>pentaho</id>
+					<name>Pentaho Artifactory Default Aggregate [internal]</name>
+					<url>http://nexus.pentaho.org:8081/nexus/content/groups/public/</url>
+					<releases>
+						<updatePolicy>always</updatePolicy>
+					</releases>
+					<snapshots>
+						<updatePolicy>always</updatePolicy>
+					</snapshots>
+				</repository>
+
+				<repository>
+					<id>artifactory-internal-releases</id>
+					<name>Pentaho Artifactory Releases [internal]</name>
+					<url>http://nexus.pentaho.org:8081/nexus/content/groups/public/</url>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+				</repository>
+				
+				<repository>
+					<id>artifactory-internal-snapshots</id>
+					<name>Pentaho Artifactory Snapshots [internal]</name>
+					<url>http://nexus.pentaho.org:8081/nexus/content/groups/public/</url>
+					<snapshots>
+						<enabled>true</enabled>
+						<updatePolicy>interval:30</updatePolicy>
+					</snapshots>
+				</repository>
+				
+				<repository>
+					<id>artifactory-internal-aggregate</id>
+					<name>Pentaho Artifactory Fetch Aggregate [internal]</name>
+					<url>http://nexus.pentaho.org:8081/nexus/content/groups/public/</url>
+					<snapshots>
+						<enabled>true</enabled>
+						<updatePolicy>interval:30</updatePolicy>
+					</snapshots>
+				</repository>
+				
+			</repositories>
+			
+			<pluginRepositories>
+
+				<pluginRepository>
+					<id>pentaho</id>
+					<name>Pentaho Artifactory Default Aggregate [internal]</name>
+					<url>http://nexus.pentaho.org:8081/nexus/content/groups/public/</url>
+					<releases>
+						<updatePolicy>always</updatePolicy>
+					</releases>
+					<snapshots>
+						<updatePolicy>always</updatePolicy>
+					</snapshots>
+				</pluginRepository>
+			
+				<pluginRepository>
+					<id>artifactory-internal-aggregate</id>
+					<name>Pentaho Artifactory Fetch Aggregate [internal]</name>
+					<url>http://nexus.pentaho.org:8081/nexus/content/groups/public/</url>
+					<snapshots>
+						<enabled>true</enabled>
+						<updatePolicy>interval:30</updatePolicy>
+					</snapshots>
+				</pluginRepository>
+
+			</pluginRepositories>
+			
+		</profile>
+	</profiles>
+
+</settings>
