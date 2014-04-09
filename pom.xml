@@ -200,7 +200,7 @@
   </reporting>
   <distributionManagement>
    <repository>
-    <id>pre-release-private</id>
+    <id>pentaho-nexus</id>
     <url>http://nexus.pentaho.org:8081/nexus/content/repositories/pre-release-private</url>
    </repository>
   </distributionManagement>
